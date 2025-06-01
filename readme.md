@@ -73,6 +73,7 @@ server:
 
 message: Server running at http://localhost:3000
 
+```text
 api:
 endpoints: - path: /file/create
 method: POST
@@ -93,6 +94,8 @@ method: DELETE
 query: name=<filename>
 curl: >
 curl -X DELETE `http://localhost:3000/file/delete?name=example.txt`
+
+```
 
 http_status_codes:
 
