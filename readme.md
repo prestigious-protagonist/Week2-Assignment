@@ -36,13 +36,6 @@ project-root/
 └── README.md # Project documentation
 ```
 
-project:
-name: Simple File Management HTTP Server
-description: >
-A Node.js server using core modules (http, fs, path) to create, read, and delete files
-through HTTP API endpoints.
-version: 1.0.0
-
 structure:
 
 - controller/file-controller.js: Route handling for file operations
