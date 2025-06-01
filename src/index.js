@@ -1,5 +1,6 @@
 const http = require('http');
 const url = require('url');
+const {StatusCodes} = require("http-status-codes")
 require("dotenv").config()
 const { handleFileRoutes } = require('./controller/file-controller');
 const { ensureFilesDir } = require('./utils/index');
@@ -13,7 +14,7 @@ process.on('unhandledRejection', (reason, promise) => {
   console.error('Unhandled Rejection:', reason);
 });
 
-// Ensure files directory exists at startup
+// Ensuring file directory exists before the server starts
 ensureFilesDir();
 
 const server = http.createServer((req, res) => {
@@ -22,7 +23,7 @@ const server = http.createServer((req, res) => {
   if (parsedUrl.pathname.startsWith('/file')) {
     handleFileRoutes(req, res, parsedUrl);
   } else {
-    res.writeHead(404, { 'Content-Type': 'application/json' });
+    res.writeHead(StatusCodes.NOT_FOUND, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ error: 'Route not found' }));
   }
 });
