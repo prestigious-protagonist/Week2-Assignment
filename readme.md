@@ -17,6 +17,7 @@ This project is a simple HTTP server built with Node.js core modules that allows
 
 ## Project Structure
 
+```text
 project-root/
 │
 ├── controller/
@@ -64,7 +65,9 @@ Start the server using command `npx nodemon src/index.js` or `node src/index.js`
 server:
 
 ```
+
     url: `http://localhost:${process.env.PORT}`
+
 ```
 
 message: Server running at http://localhost:3000
@@ -119,3 +122,4 @@ notes:
 ## To delete a file:
 
 ![Alt text](images4Readme/deleteFile.png)
+```
