@@ -1,5 +1,6 @@
 const http = require('http');
 const url = require('url');
+require("dotenv").config()
 const { handleFileRoutes } = require('./controller/file-controller');
 const { ensureFilesDir } = require('./utils/index');
 
@@ -26,7 +27,7 @@ const server = http.createServer((req, res) => {
   }
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

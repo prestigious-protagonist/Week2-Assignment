@@ -57,10 +57,14 @@ prerequisites:
 setup:
 steps: - git clone <repository-url> - cd <repository-folder> - node index.js
 
+create .env file inside the root folder - initialize variable PORT = 3000 || any suitable port number
+
+Run : `npm install` to install packages
+Start the server using command `npx nodemon src/index.js` or `node src/index.js`
 server:
 
 ```
-    url: http://localhost:3000
+    url: `http://localhost:${process.env.PORT}`
 ```
 
 message: Server running at http://localhost:3000
