@@ -34,6 +34,7 @@ project-root/
 ├── index.js # Main server entry point
 │
 └── README.md # Project documentation
+```
 
 project:
 name: Simple File Management HTTP Server
@@ -122,4 +123,7 @@ notes:
 ## To delete a file:
 
 ![Alt text](images4Readme/deleteFile.png)
+
+```
+
 ```
